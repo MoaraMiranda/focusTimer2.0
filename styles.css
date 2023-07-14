@@ -12,7 +12,7 @@
   --icon-color: #fff;
   --text-color: hsla(240, 6%, 21%, 1);
 }
- /* To-do: arrumar centralização de tela*/
+/* To-do: arrumar centralização de tela*/
 body {
   font-family: "Roboto", sans-serif;
   font-size: 14rem;
@@ -73,17 +73,17 @@ button {
   cursor: pointer;
 }
 
-@media (max-width: 960px){
+@media (max-width: 960px) {
   body {
-   font-size: 10rem;
-   padding: 5rem;
+    font-size: 10rem;
+    padding: 5rem;
   }
   .page {
     gap: 5rem;
   }
-.cards{
-  gap: 1rem;
-}
+  .cards {
+    gap: 1rem;
+  }
 }
 
 @media (max-width: 560px) {
