@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+  --base-color: 194;
+  --bg-pressed-card: hsl(var(--base-color), 97%, 31%);
+  --bg-card-hover: hsla(var(--base-color), 97%, 31%, 0.5);
+  --bg-card: #e1e1e6;
+  --icon-color: #fff;
+  --text-color: hsla(240, 6%, 21%, 1);
+}
+ /* To-do: arrumar centralização de tela*/
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14rem;
+  min-height: 100vh;
+  display: grid;
+  justify-content: center;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.page {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-self: center;
+  justify-self: center;
+  gap: 20rem;
+}
+
+.hide {
+  display: none;
+}
+
+.timer-controls {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.timer {
+  display: flex;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-self: center;
+}
+
+.card {
+  background: var(--bg-card);
+  width: -webkit-fill-available;
+  text-align: center;
+  border-radius: 2.4rem;
+}
+.card:hover {
+  background: var(--bg-card-hover);
+  cursor: pointer;
+}
+
+@media (max-width: 960px) {
+ 
+  .page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7rem;
+  }
+  .cards {
+    width: -webkit-fill-available;
+  }
+}
