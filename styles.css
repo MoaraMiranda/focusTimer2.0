@@ -31,7 +31,7 @@ button {
   grid-template-columns: repeat(2, 1fr);
   align-self: center;
   justify-self: center;
-  gap: 20rem;
+  gap: 10rem;
 }
 
 .hide {
@@ -73,14 +73,27 @@ button {
   cursor: pointer;
 }
 
-@media (max-width: 960px) {
- 
+@media (max-width: 960px){
+  body {
+   font-size: 10rem;
+   padding: 5rem;
+  }
+  .page {
+    gap: 5rem;
+  }
+.cards{
+  gap: 1rem;
+}
+}
+
+@media (max-width: 560px) {
   .page {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 7rem;
   }
+
   .cards {
     width: -webkit-fill-available;
   }
