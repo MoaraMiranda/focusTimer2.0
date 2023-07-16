@@ -10,13 +10,15 @@ export default function Controls({
     buttonPause.classList.remove("hide");
   }
 
-  function pause() {
+  function pauseOrStop() {
     buttonPlay.classList.remove("hide");
     buttonPause.classList.add("hide");
   }
 
+  
   return {
     play,
-    pause,
+    pauseOrStop,
   };
 }
+
