@@ -6,11 +6,11 @@
 :root {
   font-size: 62.5%;
   --base-color: 194;
-  --bg-pressed-card: hsl(var(--base-color), 97%, 31%);
+  --bg-selected-card: hsl(var(--base-color), 97%, 31%);
   --bg-card-hover: hsla(var(--base-color), 97%, 31%, 0.5);
   --bg-card: #e1e1e6;
-  --icon-color: #fff;
-  --text-color: hsla(240, 6%, 21%, 1);
+  --icon-selected-color: #fff;
+  --text-icon-color: hsla(240, 6%, 21%, 1);
 }
 /* To-do: arrumar centralização de tela*/
 body {
@@ -46,7 +46,7 @@ button {
 
 .timer {
   display: flex;
-  color: var(--text-color);
+  color: var(--text-icon-color);
   margin-bottom: 2rem;
 }
 
@@ -62,6 +62,14 @@ button {
   align-self: center;
 }
 
+button.svg-selected svg path {
+  fill: var(--icon-selected-color);
+}
+
+button svg path {
+  fill: var(--text-icon-color);
+}
+
 .card {
   background: var(--bg-card);
   width: -webkit-fill-available;
@@ -72,6 +80,13 @@ button {
   background: var(--bg-card-hover);
   cursor: pointer;
 }
+
+.selected {
+  background: var(--bg-selected-card);
+}
+/* svg .icon-selected {
+  fill: var(--icon-selected-color);
+} */
 
 @media (max-width: 960px) {
   body {
