@@ -18,6 +18,8 @@ export default function Controls({
   function pauseOrStop() {
     buttonPlay.classList.remove("hide");
     buttonPause.classList.add("hide");
+    removeAllClassSelected();
+
   }
 
   function natureCardSelected() {

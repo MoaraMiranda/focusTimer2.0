@@ -56,10 +56,18 @@ export default function Sound() {
       isPlaying = "";
     }
   }
+
+  function stopSounds() {
+      natureAudio.pause()
+      rainAudio.pause();
+      cafeteriaAudio.pause();
+      fireplaceAudio.pause();
+  }
   return {
     pressNatureButton,
     pressRainButton,
     pressCafeButton,
     pressFireButton,
+    stopSounds,
   };
 }

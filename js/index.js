@@ -120,6 +120,7 @@ buttonPause.addEventListener("click", function () {
 buttonStop.addEventListener("click", function () {
   controls.pauseOrStop();
   timerStop();
+  sound.stopSounds()
 });
 
 buttonTimeUp.addEventListener("click", function () {
