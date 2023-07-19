@@ -3,6 +3,9 @@ export default function Sound() {
   const rainAudio = new Audio("audios/rain.wav");
   const cafeteriaAudio = new Audio("audios/cafeteria.wav");
   const fireplaceAudio = new Audio("audios/fireplace.wav");
+  const kitchenTimer = new Audio(
+    "https://github.com/maykbrito/automatic-video-creator/blob/master/audios/kichen-timer.mp3?raw=true"
+  );
 
   let isPlaying = "";
 
@@ -58,16 +61,22 @@ export default function Sound() {
   }
 
   function stopSounds() {
-      natureAudio.pause()
-      rainAudio.pause();
-      cafeteriaAudio.pause();
-      fireplaceAudio.pause();
+    natureAudio.pause();
+    rainAudio.pause();
+    cafeteriaAudio.pause();
+    fireplaceAudio.pause();
   }
+
+  function timeEnd() {
+    kitchenTimer.play();
+  }
+
   return {
     pressNatureButton,
     pressRainButton,
     pressCafeButton,
     pressFireButton,
     stopSounds,
+    timeEnd,
   };
 }

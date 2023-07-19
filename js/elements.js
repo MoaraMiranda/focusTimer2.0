@@ -17,8 +17,6 @@ const modeToggle = document.querySelector("#dark-mode-toggle");
 const modeBtnText = document.querySelector("#btn-text");
 const modeBtnIcon = document.querySelector("#btn-icon");
 
-
-
 export {
   buttonPlay,
   buttonPause,

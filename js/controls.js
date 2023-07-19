@@ -19,7 +19,6 @@ export default function Controls({
     buttonPlay.classList.remove("hide");
     buttonPause.classList.add("hide");
     removeAllClassSelected();
-
   }
 
   function natureCardSelected() {
@@ -37,14 +36,13 @@ export default function Controls({
   function cafeCardSelected() {
     removeAllClassSelected();
     buttonCafeSound.classList.add("selected");
-    cafeIcon.classList.add("svg-selected")
+    cafeIcon.classList.add("svg-selected");
   }
 
   function fireCardSelected() {
     removeAllClassSelected();
     buttonFireplaceSound.classList.add("selected");
     fireIcon.classList.add("svg-selected");
-
   }
 
   function removeAllClassSelected() {
