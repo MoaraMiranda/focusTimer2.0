@@ -16,6 +16,9 @@ import {
   rainIcon,
   cafeIcon,
   fireIcon,
+  modeToggle,
+  modeBtnText,
+  modeBtnIcon,
 } from "./elements.js";
 
 import {
@@ -120,7 +123,7 @@ buttonPause.addEventListener("click", function () {
 buttonStop.addEventListener("click", function () {
   controls.pauseOrStop();
   timerStop();
-  sound.stopSounds()
+  sound.stopSounds();
 });
 
 buttonTimeUp.addEventListener("click", function () {
@@ -153,4 +156,18 @@ buttonCafeSound.addEventListener("click", function () {
 buttonFireplaceSound.addEventListener("click", function () {
   sound.pressFireButton();
   controls.fireCardSelected();
+});
+
+modeToggle.addEventListener("click", function () {
+  const bodyClassList = document.body.classList;
+
+  bodyClassList.toggle("dark-mode");
+
+  if (bodyClassList.contains("dark-mode")) {
+    modeBtnIcon.src = "assets/lightIcon.png";
+    modeBtnText.innerHTML = "Light";
+  } else {
+    modeBtnIcon.src = "assets/darkIcon.png";
+    modeBtnText.innerHTML = "Dark";
+  }
 });

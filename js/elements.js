@@ -13,7 +13,9 @@ const natureIcon = document.querySelector("#nature-button");
 const rainIcon = document.querySelector("#rain-button");
 const cafeIcon = document.querySelector("#cafe-button");
 const fireIcon = document.querySelector("#fire-button");
-
+const modeToggle = document.querySelector("#dark-mode-toggle");
+const modeBtnText = document.querySelector("#btn-text");
+const modeBtnIcon = document.querySelector("#btn-icon");
 
 
 
@@ -33,4 +35,7 @@ export {
   rainIcon,
   cafeIcon,
   fireIcon,
+  modeToggle,
+  modeBtnText,
+  modeBtnIcon,
 };
