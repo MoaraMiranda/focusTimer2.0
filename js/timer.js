@@ -3,14 +3,16 @@ import Sound from "./sounds.js";
 export default function TimerSetup({
   secondDisplay,
   minuteDisplay,
-  ONE_SECOND,
-  SIXTY_SECONDS,
-  TEN_SECONDS,
-  DEFAULT_MINUTE,
-  DEFAULT_SECOND,
-  FIVE_MINUTES_IN_SECONDS,
 }) {
+
   let timeOut;
+  const SIXTY_SECONDS = 60;
+  const ONE_SECOND = 1;
+  const TEN_SECONDS = 10;
+  const FIVE_MINUTES_IN_SECONDS = 300;
+  const DEFAULT_MINUTE = "25";
+  const DEFAULT_SECOND = "00";
+  const MILI_SECONDS = 1000;
 
   function timerStart() {
     let timeInSecondsUpdated = timerInSeconds();
@@ -26,7 +28,7 @@ export default function TimerSetup({
         minutesUpdated < TEN_SECONDS ? `0${minutesUpdated}` : minutesUpdated;
 
       timeInSecondsUpdated > 0 ? timerStart() : isFinished();
-    }, 1000);
+    }, MILI_SECONDS);
   }
 
   function isFinished() {

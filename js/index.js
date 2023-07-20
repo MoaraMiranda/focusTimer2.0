@@ -32,15 +32,6 @@ import {
   fireVolume,
 } from "./elements.js";
 
-import {
-  SIXTY_SECONDS,
-  ONE_SECOND,
-  TEN_SECONDS,
-  FIVE_MINUTES_IN_SECONDS,
-  DEFAULT_MINUTE,
-  DEFAULT_SECOND,
-} from "./helper.js";
-
 const sound = Sound();
 
 const controls = Controls({
@@ -63,12 +54,6 @@ const controls = Controls({
 const timer = TimerSetup({
   secondDisplay,
   minuteDisplay,
-  ONE_SECOND,
-  SIXTY_SECONDS,
-  TEN_SECONDS,
-  DEFAULT_MINUTE,
-  DEFAULT_SECOND,
-  FIVE_MINUTES_IN_SECONDS,
 });
 
 const events = Events({
