@@ -1,5 +1,5 @@
 import Sound from "./sounds.js";
-
+// TODO - arrumar ero no botao de tirar minutos
 export default function TimerSetup({
   secondDisplay,
   minuteDisplay,

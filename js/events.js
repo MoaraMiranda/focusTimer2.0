@@ -11,6 +11,10 @@ import {
   modeToggle,
   modeBtnText,
   modeBtnIcon,
+  natureVolume,
+  rainVolume,
+  cafeVolume,
+  fireVolume
 } from "./elements.js";
 
 export default function Events({ controls, sound, timer }) {
@@ -43,21 +47,43 @@ export default function Events({ controls, sound, timer }) {
   buttonNatureSound.addEventListener("click", function () {
     sound.pressNatureButton();
     controls.natureCardSelected();
+    controls.setPositionVolume();
+    sound.setVolume();
   });
 
   buttonRainSound.addEventListener("click", function () {
     sound.pressRainButton();
     controls.rainCardSelected();
+    controls.setPositionVolume();
+    sound.setVolume();
   });
 
   buttonCafeSound.addEventListener("click", function () {
     sound.pressCafeButton();
     controls.cafeCardSelected();
+    controls.setPositionVolume();
+    sound.setVolume();
   });
 
   buttonFireplaceSound.addEventListener("click", function () {
     sound.pressFireButton();
     controls.fireCardSelected();
+  });
+
+  natureVolume.addEventListener("change", function (event) {
+    sound.setVolume(natureVolume.value);
+  });
+
+  rainVolume.addEventListener("change", function (event) {
+    sound.setVolume(rainVolume.value);
+  });
+
+  cafeVolume.addEventListener("change", function (event) {
+    sound.setVolume(cafeVolume.value);
+  });
+
+  fireVolume.addEventListener("change", function (event) {
+    sound.setVolume(fireVolume.value);
   });
 
   modeToggle.addEventListener("click", function () {

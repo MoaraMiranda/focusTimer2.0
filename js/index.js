@@ -22,6 +22,14 @@ import {
   modeToggle,
   modeBtnText,
   modeBtnIcon,
+  natureVolume,
+  natureCard,
+  rainCard,
+  rainVolume,
+  cafeCard,
+  cafeVolume,
+  fireplaceCard,
+  fireVolume,
 } from "./elements.js";
 
 import {
@@ -38,14 +46,18 @@ const sound = Sound();
 const controls = Controls({
   buttonPlay,
   buttonPause,
-  buttonNatureSound,
-  buttonRainSound,
-  buttonCafeSound,
-  buttonFireplaceSound,
+  natureCard,
+  rainCard,
+  cafeCard,
+  fireplaceCard,
   natureIcon,
   rainIcon,
   cafeIcon,
   fireIcon,
+  natureVolume,
+  rainVolume,
+  cafeVolume,
+  fireVolume,
 });
 
 const timer = TimerSetup({
@@ -64,3 +76,4 @@ const events = Events({
   sound,
   timer,
 });
+

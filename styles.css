@@ -29,7 +29,7 @@
 body {
   background: var(--background-body);
   font-family: "Roboto", sans-serif;
-  font-size: 14rem;
+  font-size: 17rem;
   min-height: 100vh;
   display: grid;
   justify-content: center;
@@ -107,25 +107,79 @@ button svg path {
 
 .card {
   background: var(--bg-card);
-  width: -webkit-fill-available;
-  text-align: center;
+  /* width: -webkit-fill-available; */
   border-radius: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  gap: 3.2rem;
 }
+
 .card:hover {
   background: var(--bg-card-hover);
-  cursor: pointer;
 }
 
 .selected {
   background: var(--bg-selected-card);
 }
-/* svg .icon-selected {
-  fill: var(--icon-selected-color);
-} */
 
-@media (max-width: 960px) {
+#nature-button,
+#rain-button,
+#cafe-button,
+#fire-button {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.vol-wrapper {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  padding: 0px 10px;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+  border-radius: 15px;
+  height: 6px;
+  background: var(--icon-color);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 15px;
+  width: 15px;
+  background-color: var(--icon-color);
+  border-radius: 50%;
+  border: none;
+  transition: 0.2s ease-in-out;
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 15px;
+  width: 15px;
+  background-color: var(--icon-color);
+  border-radius: 50%;
+  border: none;
+  transition: 0.2s ease-in-out;
+}
+
+input[type="range"].range-selected,
+input[type="range"].range-selected::-webkit-slider-thumb {
+  background: var(--icon-selected-color);
+}
+
+input[type="range"].range-selected::-moz-range-thumb {
+  background: var(--icon-selected-color);
+}
+
+/* TO-DO: arrumar botao de troca de tema no media query */
+/* @media (max-width: 960px) {
   body {
-    font-size: 10rem;
     padding: 5rem;
   }
   .page {
@@ -134,17 +188,45 @@ button svg path {
   .cards {
     gap: 1rem;
   }
-}
+} */
 
-@media (max-width: 560px) {
+@media (max-width: 960px) {
   .page {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 7rem;
+    gap: 5rem;
   }
 
   .cards {
     width: -webkit-fill-available;
+  }
+  button span {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  body {
+    font-size: 12rem;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .vol-wrapper {
+    width: 100%;
+    justify-content: center;
+  }
+  .btn-mode-indicator {
+    right: 1rem;
+    top: 1rem;
+    background: none;
+    margin-top: 1rem;
+  }
+  .timer-controls {
+    margin-top: 7rem;
   }
 }

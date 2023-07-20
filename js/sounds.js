@@ -1,3 +1,5 @@
+import { natureVolume } from "./elements.js";
+
 export default function Sound() {
   const natureAudio = new Audio("audios/nature.wav");
   const rainAudio = new Audio("audios/rain.wav");
@@ -71,6 +73,13 @@ export default function Sound() {
     kitchenTimer.play();
   }
 
+  function setVolume(value = 50) {
+    const volume = value / 100;
+    natureAudio.volume = volume;
+    rainAudio.volume = volume;
+    cafeteriaAudio.volume = volume;
+    fireplaceAudio.volume = volume;
+  }
   return {
     pressNatureButton,
     pressRainButton,
@@ -78,5 +87,6 @@ export default function Sound() {
     pressFireButton,
     stopSounds,
     timeEnd,
+    setVolume,
   };
 }
