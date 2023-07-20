@@ -177,19 +177,6 @@ input[type="range"].range-selected::-moz-range-thumb {
   background: var(--icon-selected-color);
 }
 
-/* TO-DO: arrumar botao de troca de tema no media query */
-/* @media (max-width: 960px) {
-  body {
-    padding: 5rem;
-  }
-  .page {
-    gap: 5rem;
-  }
-  .cards {
-    gap: 1rem;
-  }
-} */
-
 @media (max-width: 960px) {
   .page {
     display: flex;

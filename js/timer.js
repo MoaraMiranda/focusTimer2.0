@@ -1,5 +1,5 @@
 import Sound from "./sounds.js";
-// TODO - arrumar ero no botao de tirar minutos
+
 export default function TimerSetup({
   secondDisplay,
   minuteDisplay,
@@ -76,10 +76,14 @@ export default function TimerSetup({
 
     const actualTimeInMinutes = Math.floor(lessFiveMinutes / SIXTY_SECONDS);
 
-    minuteDisplay.textContent =
-      actualTimeInMinutes < TEN_SECONDS
-        ? `0${actualTimeInMinutes}`
-        : actualTimeInMinutes;
+    if (actualTimeInMinutes <= 0) {
+      return alert("Are you sure there is enough time? Let's add more time 😉");
+    } else {
+      minuteDisplay.textContent =
+        actualTimeInMinutes < TEN_SECONDS
+          ? `0${actualTimeInMinutes}`
+          : actualTimeInMinutes;
+    }
   }
 
   return {

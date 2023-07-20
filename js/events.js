@@ -14,7 +14,7 @@ import {
   natureVolume,
   rainVolume,
   cafeVolume,
-  fireVolume
+  fireVolume,
 } from "./elements.js";
 
 export default function Events({ controls, sound, timer }) {
@@ -68,6 +68,8 @@ export default function Events({ controls, sound, timer }) {
   buttonFireplaceSound.addEventListener("click", function () {
     sound.pressFireButton();
     controls.fireCardSelected();
+    controls.setPositionVolume();
+    sound.setVolume();
   });
 
   natureVolume.addEventListener("change", function (event) {

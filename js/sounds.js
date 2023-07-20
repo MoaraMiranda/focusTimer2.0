@@ -1,4 +1,3 @@
-import { natureVolume } from "./elements.js";
 
 export default function Sound() {
   const natureAudio = new Audio("audios/nature.wav");
