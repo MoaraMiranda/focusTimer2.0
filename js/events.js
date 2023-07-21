@@ -94,10 +94,10 @@ export default function Events({ controls, sound, timer }) {
     bodyClassList.toggle("dark-mode");
 
     if (bodyClassList.contains("dark-mode")) {
-      modeBtnIcon.src = "assets/lightIcon.png";
+      modeBtnIcon.src = "assets/lightIcon.svg";
       modeBtnText.innerHTML = "Light";
     } else {
-      modeBtnIcon.src = "assets/darkIcon.png";
+      modeBtnIcon.src = "assets/darkIcon.svg";
       modeBtnText.innerHTML = "Dark";
     }
   });
