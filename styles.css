@@ -74,7 +74,7 @@ button {
 }
 
 button span {
-  font-size: 2rem;
+  font-size: 1.3rem;
   display: flex;
 }
 
@@ -120,9 +120,7 @@ svg path {
   gap: 3.2rem;
 }
 
-.card:hover {
-  background: var(--bg-card-hover);
-}
+
 
 .selected {
   background: var(--bg-selected-card);
@@ -188,13 +186,21 @@ footer {
   align-self: end;
   justify-self: center;
 }
+
 footer a {
   text-decoration: none;
   color: var(--text-color);
   cursor: pointer;
 }
-a:hover{
-  color: var(--bg-card-hover)
+
+@media(hover: hover) and (pointer: fine) {
+  a:hover{
+    color: var(--bg-card-hover)
+  }
+
+  .card:hover {
+    background: var(--bg-card-hover);
+  }
 }
 
 @media (max-width: 960px) {
@@ -224,17 +230,28 @@ a:hover{
     gap: 2rem;
     margin-bottom: 2rem;
   }
+
   .vol-wrapper {
     width: 100%;
     justify-content: center;
   }
+
   .btn-mode-indicator {
     right: 1rem;
     top: 1rem;
     background: none;
     margin-top: 1rem;
   }
+
   .timer-controls {
     margin-top: 7rem;
+  }
+
+  input[type="range"]{
+    display: none;
+  }
+
+  .card {
+    gap: 0;
   }
 }
