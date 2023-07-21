@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 :root {
-  font-size: 62.5%;
+  font-size: clamp(40%, 1% + 2vw, 62.5%);
   --hue: 194;
   --bg-selected-card: hsl(var(--hue), 97%, 31%);
   --bg-card-hover: hsla(var(--hue), 97%, 31%, 0.5);
@@ -42,10 +42,15 @@ button {
   background-color: transparent;
   cursor: pointer;
 }
+
+.container{
+  display: grid;
+}
+
 .page {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  align-self: center;
+  align-self: end;
   justify-self: center;
   gap: 10rem;
 }
@@ -56,8 +61,8 @@ button {
 
 .btn-mode-indicator {
   position: absolute;
-  right: 6rem;
-  top: 6rem;
+  right: 2.5rem;
+  top: 2.5rem;
   background: var(--bg-card);
   color: var(--icon-color);
   border-radius: 0.8rem;
@@ -65,7 +70,7 @@ button {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 button span {
@@ -97,11 +102,11 @@ button span {
   align-self: center;
 }
 
-button.svg-selected svg path {
+.svg-selected svg path {
   fill: var(--icon-selected-color);
 }
 
-button svg path {
+svg path {
   fill: var(--icon-color);
 }
 
@@ -177,6 +182,21 @@ input[type="range"].range-selected::-moz-range-thumb {
   background: var(--icon-selected-color);
 }
 
+footer {
+  font-size: 2rem;
+  color: var(--text-color);
+  align-self: end;
+  justify-self: center;
+}
+footer a {
+  text-decoration: none;
+  color: var(--text-color);
+  cursor: pointer;
+}
+a:hover{
+  color: var(--bg-card-hover)
+}
+
 @media (max-width: 960px) {
   .page {
     display: flex;
@@ -202,6 +222,7 @@ input[type="range"].range-selected::-moz-range-thumb {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    margin-bottom: 2rem;
   }
   .vol-wrapper {
     width: 100%;
